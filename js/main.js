@@ -30,12 +30,12 @@ window.addEventListener('resize', () => {
 
 // State Variables and DOM Elements
 const slides = [
-    { title: "Mahalaya", subtitle: "The Beginning" },
-    { title: "Sosthi", subtitle: "Bodhon & Welcome" },
-    { title: "Saptami", subtitle: "Kola Bou Snan" },
-    { title: "Ostomi", subtitle: "Sandhi Puja" },
-    { title: "Nabami", subtitle: "Maha Nabami" },
-    { title: "Doshomi", subtitle: "Bijoya & Farewell" }
+    { title: "মহালয়া", subtitle: "দেবীপিয়ারি আগমন" },
+    { title: "ষষ্ঠী", subtitle: "বোধন ও আবাহন" },
+    { title: "সপ্তমী", subtitle: "কলাবউ স্নান ও নবপত্রিকা প্রবেশ" },
+    { title: "অষ্টমী", subtitle: "সন্ধিপূজা ও অঞ্জলি" },
+    { title: "নবমী", subtitle: "মহা নবমী ও ধুনুচি নাচ" },
+    { title: "দশমী", subtitle: "বিজয়া ও প্রতিমা বিসর্জন" }
 ];
 
 let current = 0;
@@ -45,15 +45,21 @@ const ghostNumEl = document.getElementById('ghostNum');
 const totalNumEl = document.getElementById('totalNum');
 const slideBgEls = document.querySelectorAll('.slide-bg');
 
-totalNumEl.textContent = slides.length;
+// Convert english num to bengali num
+function convertToBanglaNum(num) {
+    const banglaDigits = {'0':'০', '1':'১', '2':'২', '3':'৩', '4':'৪', '5':'৫', '6':'৬'};
+    return String(num).split('').map(digit => banglaDigits[digit] || digit).join('');
+}
+totalNumEl.textContent = slides.length.toLocaleString('bn-BD');
 let isAnimating = false;
 
 // Render active slide components
 function renderSlide() {
     const s = slides[current];
     titleEl.innerHTML = `<span class="slide-title">${s.title}</span><span class="slide-divider"></span><span class="slide-subtitle">${s.subtitle}</span>`;
-    currentNumEl.textContent = current + 1;
-    ghostNumEl.textContent = current + 1;
+    const banglaCurrentNum = convertToBanglaNum(current + 1);
+    currentNumEl.textContent = banglaCurrentNum;
+    ghostNumEl.textContent = banglaCurrentNum;
     slideBgEls.forEach((bg, index) => {
         bg.classList.toggle('active', index === current);
     });
