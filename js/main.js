@@ -46,9 +46,9 @@ const totalNumEl = document.getElementById('totalNum');
 const slideBgEls = document.querySelectorAll('.slide-bg');
 
 // Convert english num to bengali num
-function convertToBanglaNum(num) {
-    const banglaDigits = {'0':'০', '1':'১', '2':'২', '3':'৩', '4':'৪', '5':'৫', '6':'৬'};
-    return String(num).split('').map(digit => banglaDigits[digit] || digit).join('');
+function convertToBengaliNum(num) {
+    const bengaliDigits = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬' };
+    return String(num).split('').map(digit => bengaliDigits[digit] || digit).join('');
 }
 totalNumEl.textContent = slides.length.toLocaleString('bn-BD');
 let isAnimating = false;
@@ -57,9 +57,9 @@ let isAnimating = false;
 function renderSlide() {
     const s = slides[current];
     titleEl.innerHTML = `<span class="slide-title">${s.title}</span><span class="slide-divider"></span><span class="slide-subtitle">${s.subtitle}</span>`;
-    const banglaCurrentNum = convertToBanglaNum(current + 1);
-    currentNumEl.textContent = banglaCurrentNum;
-    ghostNumEl.textContent = banglaCurrentNum;
+    const bengaliCurrentNum = convertToBengaliNum(current + 1);
+    currentNumEl.textContent = bengaliCurrentNum;
+    ghostNumEl.textContent = bengaliCurrentNum;
     slideBgEls.forEach((bg, index) => {
         bg.classList.toggle('active', index === current);
     });
@@ -111,44 +111,60 @@ renderSlide();
 
 
 // Countdown set for Durga Puja Day's
-const countdownTarget = new Date('2026-10-17T00:00:00+06:00').getTime();
-const countdownEls = {
-    days: document.getElementById('countdownDays'),
-    hours: document.getElementById('countdownHours'),
-    minutes: document.getElementById('countdownMinutes'),
-    seconds: document.getElementById('countdownSeconds')
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const countdownTarget = new Date('2026-10-17T00:00:00+06:00').getTime();
+    const countdownEls = {
+        days: document.getElementById('countdownDays'),
+        hours: document.getElementById('countdownHours'),
+        minutes: document.getElementById('countdownMinutes'),
+        seconds: document.getElementById('countdownSeconds')
+    };
 
-// Countdown timer calculator and renderer
-function updateCountdown() {
-    const remaining = countdownTarget - Date.now();
-    if (remaining <= 0) {
-        countdownEls.days.textContent = '00';
-        countdownEls.hours.textContent = '00';
-        countdownEls.minutes.textContent = '00';
-        countdownEls.seconds.textContent = '00';
-        return;
+    // Convert English num to Bengali num
+    function convertToBengaliNum(num) {
+        const bengaliDigits = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯' };
+        return String(num).split('').map(digit => bengaliDigits[digit] || digit).join('');
     }
 
-    // Time calculation formulas
-    const totalSeconds = Math.floor(remaining / 1000);
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
+    // Countdown timer calculator and renderer
+    function updateCountdown() {
+        const remaining = countdownTarget - Date.now();
 
-    // Render formatted time to UI
-    countdownEls.days.textContent = String(days).padStart(2, '0');
-    countdownEls.hours.textContent = String(hours).padStart(2, '0');
-    countdownEls.minutes.textContent = String(minutes).padStart(2, '0');
-    countdownEls.seconds.textContent = String(seconds).padStart(2, '0');
-}
-updateCountdown();
+        // Target will finished then show : '০০'
+        if (remaining <= 0) {
+            countdownEls.days.textContent = '০০';
+            countdownEls.hours.textContent = '০০';
+            countdownEls.minutes.textContent = '০০';
+            countdownEls.seconds.textContent = '০০';
+            return;
+        }
 
-// Manage the live countdown interval
-const countdownTimer = setInterval(() => {
+        // Time calculation formulas
+        const totalSeconds = Math.floor(remaining / 1000);
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        // Format to 2 digits
+        const formattedDays = String(days).padStart(2, '0');
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        // Convert to Bengali and render to UI
+        countdownEls.days.textContent = convertToBengaliNum(formattedDays);
+        countdownEls.hours.textContent = convertToBengaliNum(formattedHours);
+        countdownEls.minutes.textContent = convertToBengaliNum(formattedMinutes);
+        countdownEls.seconds.textContent = convertToBengaliNum(formattedSeconds);
+    }
     updateCountdown();
-    if (Date.now() >= countdownTarget) {
-        clearInterval(countdownTimer);
-    }
-}, 1000);
+
+    // Manage the live countdown interval
+    const countdownTimer = setInterval(() => {
+        updateCountdown();
+        if (Date.now() >= countdownTarget) {
+            clearInterval(countdownTimer);
+        }
+    }, 1000);
+});

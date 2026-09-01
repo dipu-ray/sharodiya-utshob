@@ -350,27 +350,33 @@ body.menu-open .hero {
 
 /* 6 Slider with 6 Images */
 .bg-1 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Dugga_thakur.jpg");
+    background-image: url("/assets/images/backgrounds/bg-1.avif");
+    content-visibility: auto;
 }
 
 .bg-2 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Durga_Puja_Festival_-_Kolkata_October_2025.jpg");
+    background-image: url("/assets/images/backgrounds/bg-2.avif");
+    content-visibility: auto;
 }
 
 .bg-3 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Maha_Saptami_In_And_Around_Barisha_2025_30.jpg");
+    background-image: url("/assets/images/backgrounds/bg-3.avif");
+    content-visibility: auto;
 }
 
 .bg-4 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Idol_of_Goddess_Durga_%28Ceremonial_Worship%29_01.jpg");
+    background-image: url("/assets/images/backgrounds/bg-4.avif");
+    content-visibility: auto;
 }
 
 .bg-5 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/PXL_20250929_101835321_Durga_Puja_at_Lal_Bari_Or_Bazar_Bari_Janai%2C_West_Bengal_712304_06.jpg");
+    background-image: url("/assets/images/backgrounds/bg-5.avif");
+    content-visibility: auto;
 }
 
 .bg-6 {
-    background-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Immersion_of_Goddess_Durga.jpg");
+    background-image: url("/assets/images/backgrounds/bg-6.avif");
+    content-visibility: auto;
 }
 
 .hero-inner {
@@ -719,7 +725,7 @@ footer {
 .footer-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
     font-size: 14px;
@@ -727,20 +733,12 @@ footer {
 }
 
 .footer-inner a {
-    color: var(--white);
     text-decoration: none;
-    opacity: .9;
+    color: var(--base-2);
 }
 
 .footer-inner a:hover {
-    opacity: 1;
     text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
 }
 
 
