@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,197 @@
     <!-- To add Favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
 
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- To link external CSS file -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+    <!-- Color Gradient -->
+    <div class="site">
+
+        <!-- Animated Liquid -->
+        <div class="liquid-bg">
+            <div class="blob blob-a"></div>
+            <div class="blob blob-b"></div>
+            <div class="blob blob-c"></div>
+        </div>
+        <div class="glass-sheen"></div>
+
+        <!-- Header -->
+        <header>
+            <div class="header-inner container">
+                <a class="logo" href="#">
+                    <!-- Logo Making with SVG -->
+                    <svg xmlns="http://w3.org" viewBox="0 0 500 500" width="100%" height="100%">
+                        <circle cx="250" cy="250" r="240" class="bg" />
+                        <circle cx="250" cy="250" r="222" fill="none" stroke="#D2232A" stroke-width="6"
+                            stroke-dasharray="1,7" stroke-linecap="round" />
+                        <circle cx="250" cy="250" r="214" fill="none" stroke="#D2232A" stroke-width="2" />
+                        <circle cx="250" cy="250" r="196" class="yellow-ring" />
+                        <circle cx="250" cy="250" r="209" fill="none" stroke="#D2232A" stroke-width="2" />
+                        <circle cx="250" cy="250" r="183" fill="none" stroke="#D2232A" stroke-width="2" />
+                        <circle cx="250" cy="250" r="196" fill="none" stroke="#D2232A" stroke-width="12"
+                            stroke-dasharray="2,11" stroke-linecap="round" />
+                        <circle cx="250" cy="250" r="176" fill="none" stroke="#D2232A" stroke-width="3" />
+                        <circle cx="250" cy="250" r="169" fill="none" stroke="#D2232A" stroke-width="5"
+                            stroke-dasharray="1,6" stroke-linecap="round" />
+                        <g id="durga-exact-face" transform="translate(0, 10)">
+                            <path d="M250,135 C233,165 233,185 250,202 C267,185 267,165 250,135 Z" class="black-fill" />
+                            <path d="M250,145 C240,165 240,178 250,192 C260,178 260,165 250,145 Z" fill="#FFFFFF" />
+                            <circle cx="250" cy="170" r="8" class="black-fill" />
+                            <circle cx="252" cy="168" r="2.5" fill="#FFFFFF" />
+                            <circle cx="250" cy="214" r="5" class="black-fill" />
+                            <path d="M142,216 C165,190 205,182 242,204 C205,192 165,198 142,216 Z" class="black-fill" />
+                            <path d="M358,216 C335,190 295,182 258,204 C295,192 335,198 358,216 Z" class="black-fill" />
+                            <g id="left-eye">
+                                <path d="M145,242 C172,218 215,220 240,246 C210,270 172,268 145,242 Z" fill="#FFFFFF" />
+                                <path d="M140,240 C170,212 215,214 243,245" fill="none" stroke="#1A1A1A"
+                                    stroke-width="7" stroke-linecap="round" />
+                                <path d="M145,242 C172,270 212,268 240,246" fill="none" stroke="#1A1A1A"
+                                    stroke-width="3" />
+                                <circle cx="198" cy="244" r="16" class="black-fill" />
+                                <circle cx="203" cy="240" r="4.5" fill="#FFFFFF" />
+                            </g>
+                            <g id="right-eye">
+                                <path d="M355,242 C328,218 285,220 260,246 C290,270 328,268 355,242 Z" fill="#FFFFFF" />
+                                <path d="M360,240 C330,212 285,214 257,245" fill="none" stroke="#1A1A1A"
+                                    stroke-width="7" stroke-linecap="round" />
+                                <path d="M355,242 C328,270 288,268 260,246" fill="none" stroke="#1A1A1A"
+                                    stroke-width="3" />
+                                <circle cx="302" cy="244" r="16" class="black-fill" />
+                                <circle cx="297" cy="240" r="4.5" fill="#FFFFFF" />
+                            </g>
+                            <path d="M236,282 C242,298 245,299 250,299 C255,299 258,298 264,282" class="stroke-main"
+                                stroke-width="3.5" fill="none" />
+                            <path d="M241,293 C244,297 247,298 250,298 C253,298 256,297 259,293" class="stroke-main"
+                                stroke-width="2.5" fill="none" />
+                            <circle cx="278" cy="295" r="12" fill="none" stroke="#1A1A1A" stroke-width="2.5" />
+                            <circle cx="290" cy="295" r="2.5" class="black-fill" />
+                            <path
+                                d="M222,324 C232,317 244,320 250,325 C256,320 268,317 278,324 C268,337 232,337 222,324 Z"
+                                class="black-fill" />
+                            <path d="M222,324 C238,328 262,328 278,324 C268,344 232,344 222,324 Z" class="black-fill" />
+                        </g>
+                    </svg>
+                    <span class="logo-text">
+                        <strong style="font-size:19px;">শারদীয় উৎসব</strong>
+                    </span>
+                </a>
+
+                <!-- Navbar Buttons -->
+                <nav class="main-nav">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Shopping</a>
+                    <a href="#">Pandal Hopping</span></a>
+                    <a href="#">Live Events</span></a>
+                    <a href="#">Contact</a>
+                </nav>
+
+                <!-- Hamburger or Menu -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Nav Buttons for Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <nav>
+                    <a href="#" style="--i:0">Home</a>
+                    <a href="#" style="--i:1">About Us</a>
+                    <a href="#" style="--i:2">Shopping</a>
+                    <a href="#" style="--i:3">Pandal Hopping</a>
+                    <a href="#" style="--i:4">Live Events</a>
+                    <a href="#" style="--i:5">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Hero Section with Carousel -->
+            <section class="hero">
+                <div class="slide-bg-stack" aria-hidden="true">
+                    <div class="slide-bg bg-1 active"></div>
+                    <div class="slide-bg bg-2"></div>
+                    <div class="slide-bg bg-3"></div>
+                    <div class="slide-bg bg-4"></div>
+                    <div class="slide-bg bg-5"></div>
+                    <div class="slide-bg bg-6"></div>
+                </div>
+                <div class="hero-inner container">
+                    <button class="arrow prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+                    <div class="hero-copy">
+                        <h1 id="heroTitle">
+                            <span class="slide-title">Mahalaya</span>
+                            <span class="slide-divider"></span>
+                            <span class="slide-subtitle">The Beginning</span>
+                        </h1>
+                    </div>
+                    <button class="arrow next" id="nextBtn" aria-label="Next slide">&#10095;</button>
+                    <div class="slide-count"><span class="ghost" id="ghostNum">2</span><span id="currentNum">2</span> /
+                        <span id="totalNum">2</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Countdown for Durga Puja -->
+            <section class="countdown-section" aria-labelledby="countdownTitle">
+                <div class="container countdown-inner">
+                    <div class="countdown-kicker">Sharodiya 2026</div>
+                    <h2 class="countdown-title" id="countdownTitle">Maa Durga is Coming</h2>
+                    <div class="countdown-divider"></div>
+                    <p class="countdown-subtitle">
+                        The wait is almost over. Count every moment until Maha Shashthi and the beginning of the grand
+                        celebration.
+                    </p>
+                    <div class="countdown-grid" role="timer" aria-live="polite">
+                        <div class="countdown-card">
+                            <span class="countdown-number" id="countdownDays">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-card">
+                            <span class="countdown-number" id="countdownHours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-card">
+                            <span class="countdown-number" id="countdownMinutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-card">
+                            <span class="countdown-number" id="countdownSeconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                    <div class="countdown-note">Countdown to Maha Shashthi · 17 October 2026</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-inner">
+                <span>&copy; 2026 DurgaPuja.online — All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- To link external JS file -->
     <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
