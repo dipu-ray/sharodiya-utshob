@@ -734,7 +734,20 @@ footer {
 
 .footer-inner a {
     text-decoration: none;
-    color: var(--white);
+    font-weight: bold;
+    font-family: sans-serif;
+
+    /* টেক্সটের ভেতরের কালার গ্রেডিয়েন্ট এবং গ্লো ইফেক্ট */
+    background: linear-gradient(to right, #ffffff 20%, #ffaa44 50%, #ff5500 80%);
+    background-size: 200% auto;
+
+    /* গ্রেডিয়েন্টটি শুধুমাত্র টেক্সটের ভেতরে দেখানোর জন্য */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* লেখার ভেতরের গ্লো অ্যানিমেশন */
+    animation: internalGlow 4s linear infinite;
 }
 
 .footer-inner a:hover {
@@ -1001,5 +1014,19 @@ footer {
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes internalGlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
     }
 }
