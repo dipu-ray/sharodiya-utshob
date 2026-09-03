@@ -106,6 +106,11 @@ document.getElementById('nextBtn').addEventListener('click', () => goToSlide('ne
 document.getElementById('prevBtn').addEventListener('click', () => goToSlide('prev'));
 renderSlide();
 
+// Autoplay - every 3 seconds
+let autoplayInterval = setInterval(() => {
+    goToSlide('next');
+}, 3000);
+
 
 
 
