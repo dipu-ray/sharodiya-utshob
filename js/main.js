@@ -38,6 +38,20 @@ window.addEventListener('resize', () => {
 
 
 
+// Preload all carousel background images
+const bgImagePaths = [
+    '../assets/images/backgrounds/bg-1.avif',
+    '../assets/images/backgrounds/bg-2.avif',
+    '../assets/images/backgrounds/bg-3.avif',
+    '../assets/images/backgrounds/bg-4.avif',
+    '../assets/images/backgrounds/bg-5.avif',
+    '../assets/images/backgrounds/bg-6.avif'
+];
+bgImagePaths.forEach(path => {
+    const img = new Image();
+    img.src = path;
+});
+
 // State Variables and DOM Elements
 const slides = [
     { title: "মহালয়া", subtitle: "দেবীপিয়ারি আগমন" },
