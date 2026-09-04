@@ -207,7 +207,17 @@ header {
 }
 
 .logo-text strong {
+    text-decoration: none;
+    font-weight: bold;
     font-size: 19px;
+    line-height: 30px;
+    background: linear-gradient(to right, #ffffff 20%, #ffaa44 50%, #ff5500 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    animation: internalGlow 4s linear infinite;
 }
 
 /* Navbar Buttons */
