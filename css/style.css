@@ -20,10 +20,18 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     background: #111;
     color: var(--white);
+}
+
+button {
+    font: inherit;
 }
 
 .site {
@@ -160,6 +168,10 @@ header {
     display: flex;
     flex-direction: column;
     line-height: 1;
+}
+
+.logo-text strong {
+    font-size: 19px;
 }
 
 /* Navbar Buttons */
@@ -350,33 +362,27 @@ body.menu-open .hero {
 
 /* 6 Slider with 6 Images */
 .bg-1 {
-    background-image: url("/assets/images/backgrounds/bg-1.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-1.avif");
 }
 
 .bg-2 {
-    background-image: url("/assets/images/backgrounds/bg-2.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-2.avif");
 }
 
 .bg-3 {
-    background-image: url("/assets/images/backgrounds/bg-3.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-3.avif");
 }
 
 .bg-4 {
-    background-image: url("/assets/images/backgrounds/bg-4.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-4.avif");
 }
 
 .bg-5 {
-    background-image: url("/assets/images/backgrounds/bg-5.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-5.avif");
 }
 
 .bg-6 {
-    background-image: url("/assets/images/backgrounds/bg-6.avif");
-    content-visibility: auto;
+    background-image: url("../assets/images/backgrounds/bg-6.avif");
 }
 
 .hero-inner {
@@ -417,7 +423,7 @@ body.menu-open .hero {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #fff;
     text-shadow: 0 6px 30px rgba(240, 85, 60, .35);
     padding-bottom: 4px;
 }
@@ -623,7 +629,7 @@ body.menu-open .hero {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #fff;
     text-shadow: 0 8px 34px rgba(240, 85, 60, .22);
 }
 
@@ -775,6 +781,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: #fff;
     animation: internalGlow 4s linear infinite;
 }
 
@@ -1063,7 +1070,7 @@ footer {
     .hero-copy h1.slide-in-next,
     .hero-copy h1.slide-in-prev,
     .slide-count .num-swap,
-    .idol-panel svg {
+    svg {
         animation: none !important;
         transition: none !important;
     }

@@ -1,7 +1,14 @@
+// Convert English digits to Bengali digits
+function convertToBengaliNum(num) {
+    const bengaliDigits = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯' };
+    return String(num).split('').map(digit => bengaliDigits[digit] || digit).join('');
+}
+
 // Mobile hamburger menu
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
+// Close hamburger
 function closeMenu() {
     hamburgerBtn.classList.remove('active');
     hamburgerBtn.setAttribute('aria-expanded', 'false');
@@ -9,6 +16,7 @@ function closeMenu() {
     document.body.classList.remove('menu-open');
 }
 
+// Bar hamburger when it click
 hamburgerBtn.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
     hamburgerBtn.classList.toggle('active', isOpen);
@@ -16,10 +24,12 @@ hamburgerBtn.addEventListener('click', () => {
     document.body.classList.toggle('menu-open', isOpen);
 });
 
+// Close the mobile menu when any link inside it is clicked
 mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
 });
 
+// Close the mobile menu if the screen resizes past 980px
 window.addEventListener('resize', () => {
     if (window.innerWidth > 980) closeMenu();
 });
@@ -38,18 +48,13 @@ const slides = [
     { title: "দশমী", subtitle: "বিজয়া ও প্রতিমা বিসর্জন" }
 ];
 
+// Initialize state and cache DOM elements slider
 let current = 0;
 const titleEl = document.getElementById('heroTitle');
 const currentNumEl = document.getElementById('currentNum');
 const ghostNumEl = document.getElementById('ghostNum');
 const totalNumEl = document.getElementById('totalNum');
 const slideBgEls = document.querySelectorAll('.slide-bg');
-
-// Convert english num to bengali num
-function convertToBengaliNum(num) {
-    const bengaliDigits = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬' };
-    return String(num).split('').map(digit => bengaliDigits[digit] || digit).join('');
-}
 totalNumEl.textContent = slides.length.toLocaleString('bn-BD');
 let isAnimating = false;
 
@@ -102,14 +107,39 @@ function goToSlide(direction) {
     }, { once: true });
 }
 
-document.getElementById('nextBtn').addEventListener('click', () => goToSlide('next'));
-document.getElementById('prevBtn').addEventListener('click', () => goToSlide('prev'));
-renderSlide();
-
 // Autoplay - every 3 seconds
-let autoplayInterval = setInterval(() => {
+const AUTOPLAY_DELAY = 3000;
+let autoplayInterval = setInterval(() => goToSlide('next'), AUTOPLAY_DELAY);
+
+// Restart autoplay timer
+function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => goToSlide('next'), AUTOPLAY_DELAY);
+}
+
+// Handle next button
+document.getElementById('nextBtn').addEventListener('click', () => {
     goToSlide('next');
-}, 3000);
+    resetAutoplay();
+});
+
+// Handle previous button
+document.getElementById('prevBtn').addEventListener('click', () => {
+    goToSlide('prev');
+    resetAutoplay();
+});
+
+// Pause autoplay when tab is hidden, resume when visible again
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        clearInterval(autoplayInterval);
+    } else {
+        resetAutoplay();
+    }
+});
+
+// The first slide on page load
+renderSlide();
 
 
 
@@ -125,17 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
         seconds: document.getElementById('countdownSeconds')
     };
 
-    // Convert English num to Bengali num
-    function convertToBengaliNum(num) {
-        const bengaliDigits = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯' };
-        return String(num).split('').map(digit => bengaliDigits[digit] || digit).join('');
-    }
-
     // Countdown timer calculator and renderer
     function updateCountdown() {
         const remaining = countdownTarget - Date.now();
-
-        // Target will finished then show : '০০'
         if (remaining <= 0) {
             countdownEls.days.textContent = '০০';
             countdownEls.hours.textContent = '০০';
@@ -178,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Scroll to Top Button Logic's
+// Scroll to Top Button show and hide
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -187,6 +209,8 @@ window.addEventListener('scroll', () => {
         scrollTopBtn.classList.remove('show');
     }
 });
+
+// Scroll to top with smooth
 scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
