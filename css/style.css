@@ -67,6 +67,18 @@ button {
     animation: driftA 22s ease-in-out infinite;
 }
 
+@keyframes driftA {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(6%, 8%) scale(1.08);
+    }
+}
+
 .blob-b {
     width: 46vw;
     height: 46vw;
@@ -76,6 +88,18 @@ button {
     animation: driftB 26s ease-in-out infinite;
 }
 
+@keyframes driftB {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-8%, 6%) scale(1.05);
+    }
+}
+
 .blob-c {
     width: 38vw;
     height: 38vw;
@@ -83,6 +107,18 @@ button {
     left: 22%;
     background: radial-gradient(circle at 45% 45%, #ffcf6b, var(--orange-1) 60%, transparent 78%);
     animation: driftC 30s ease-in-out infinite;
+}
+
+@keyframes driftC {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(5%, -6%) scale(1.1);
+    }
 }
 
 .glass-sheen {
@@ -294,6 +330,18 @@ nav.main-nav a:hover {
     animation-delay: calc(var(--i) * 0.06s + 0.1s);
 }
 
+@keyframes menuItemIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Main */
 main {
     display: block;
@@ -455,16 +503,72 @@ body.menu-open .hero {
     animation: slideOutNext .38s cubic-bezier(.55, 0, .35, 1) forwards;
 }
 
+@keyframes slideOutNext {
+    from {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-40px) scale(.96);
+        filter: blur(6px);
+    }
+}
+
 .hero-copy h1.slide-out-prev {
     animation: slideOutPrev .38s cubic-bezier(.55, 0, .35, 1) forwards;
+}
+
+@keyframes slideOutPrev {
+    from {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(40px) scale(.96);
+        filter: blur(6px);
+    }
 }
 
 .hero-copy h1.slide-in-next {
     animation: slideInNext .5s cubic-bezier(.2, .8, .25, 1) forwards;
 }
 
+@keyframes slideInNext {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(.96);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
 .hero-copy h1.slide-in-prev {
     animation: slideInPrev .5s cubic-bezier(.2, .8, .25, 1) forwards;
+}
+
+@keyframes slideInPrev {
+    from {
+        opacity: 0;
+        transform: translateX(-40px) scale(.96);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
 }
 
 .idol-panel svg {
@@ -482,6 +586,23 @@ body.menu-open .hero {
 
 .slide-count .num-swap {
     animation: numPop .4s cubic-bezier(.2, .8, .25, 1);
+}
+
+@keyframes numPop {
+    0% {
+        opacity: 0;
+        transform: translateY(8px) scale(.85);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .arrow:active {
@@ -785,136 +906,6 @@ footer {
     animation: internalGlow 4s linear infinite;
 }
 
-.footer-inner a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-/* CSS Animations */
-@keyframes driftA {
-
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(6%, 8%) scale(1.08);
-    }
-}
-
-@keyframes driftB {
-
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(-8%, 6%) scale(1.05);
-    }
-}
-
-@keyframes driftC {
-
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(5%, -6%) scale(1.1);
-    }
-}
-
-@keyframes menuItemIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideOutNext {
-    from {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        filter: blur(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(-40px) scale(.96);
-        filter: blur(6px);
-    }
-}
-
-@keyframes slideOutPrev {
-    from {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        filter: blur(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(40px) scale(.96);
-        filter: blur(6px);
-    }
-}
-
-@keyframes slideInNext {
-    from {
-        opacity: 0;
-        transform: translateX(40px) scale(.96);
-        filter: blur(6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        filter: blur(0);
-    }
-}
-
-@keyframes slideInPrev {
-    from {
-        opacity: 0;
-        transform: translateX(-40px) scale(.96);
-        filter: blur(6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        filter: blur(0);
-    }
-}
-
-@keyframes numPop {
-    0% {
-        opacity: 0;
-        transform: translateY(8px) scale(.85);
-    }
-
-    60% {
-        opacity: 1;
-        transform: translateY(-2px) scale(1.05);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 @keyframes internalGlow {
     0% {
         background-position: 0% center;
@@ -927,6 +918,10 @@ footer {
     100% {
         background-position: 0% center;
     }
+}
+
+.footer-inner a:hover {
+    text-decoration: underline;
 }
 
 
