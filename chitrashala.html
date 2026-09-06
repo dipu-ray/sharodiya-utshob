@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>শারদীয় উৎসব - দুর্গাপূজা ওয়েব হাব</title>
+    <title>চিত্রশালা - শারদীয় উৎসব | দুর্গাপূজা ওয়েব হাব</title>
 
     <!-- To add Favicon -->
     <link rel="icon" href="./assets/images/icons/icon.png" type="image/png">
@@ -19,23 +19,14 @@
     <!-- Fontawesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-    <!-- To link external CSS file -->
-    <link rel="stylesheet" href="./css/pradhan-pata.css">
+    <!-- To link external CSS files -->
+    <link rel="stylesheet" href="./css/chitrashala.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- Color Gradient -->
     <div class="site">
-
-        <!-- Animated Liquid -->
-        <div class="liquid-bg">
-            <div class="blob blob-a"></div>
-            <div class="blob blob-b"></div>
-            <div class="blob blob-c"></div>
-        </div>
-        <div class="glass-sheen"></div>
-
         <!-- Header -->
         <header>
             <div class="header-inner container">
@@ -128,63 +119,124 @@
 
         <!-- Main -->
         <main>
-            <!-- Hero Section with Carousel -->
-            <section class="hero">
-                <div class="slide-bg-stack" aria-hidden="true">
-                    <div class="slide-bg bg-1 active"></div>
-                    <div class="slide-bg bg-2"></div>
-                    <div class="slide-bg bg-3"></div>
-                    <div class="slide-bg bg-4"></div>
-                    <div class="slide-bg bg-5"></div>
-                    <div class="slide-bg bg-6"></div>
+            <!-- Page Banner -->
+            <section class="page-banner">
+                <div class="container page-banner-inner">
+                    <span class="page-kicker">শারদীয় উৎসব ২০২৬</span>
+                    <h1 class="page-title">চিত্রশালা</h1>
+                    <div class="page-divider"></div>
+                    <p class="page-lead">
+                        মহালয়া থেকে বিজয়া দশমী পর্যন্ত — উৎসবের প্রতিটি মুহূর্তের রঙিন ছবির সংকলন।
+                    </p>
+                    <nav class="breadcrumb" aria-label="breadcrumb">
+                        <a href="pradhan-pata.html">প্রধান পাতা</a>
+                        <span class="crumb-sep">/</span>
+                        <span class="crumb-current">চিত্রশালা</span>
+                    </nav>
                 </div>
-                <div class="hero-inner container">
-                    <button class="arrow prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
-                    <div class="hero-copy">
-                        <h1 id="heroTitle">
-                            <span class="slide-title">মহালয়া</span>
-                            <span class="slide-divider"></span>
-                            <span class="slide-subtitle">দেবীপিয়ারি আগমন</span>
-                        </h1>
-                    </div>
-                    <button class="arrow next" id="nextBtn" aria-label="Next slide">&#10095;</button>
-                    <div class="slide-count"><span class="ghost" id="ghostNum">১</span><span id="currentNum">১</span> /
-                        <span id="totalNum">৬</span>
+            </section>
+
+            <!-- Filter Tabs -->
+            <section class="filter-section">
+                <div class="container">
+                    <div class="filter-tabs" id="filterTabs">
+                        <button class="filter-tab active" data-filter="all">সব ছবি</button>
+                        <button class="filter-tab" data-filter="mahalaya">মহালয়া</button>
+                        <button class="filter-tab" data-filter="sasthi">ষষ্ঠী</button>
+                        <button class="filter-tab" data-filter="saptami">সপ্তমী</button>
+                        <button class="filter-tab" data-filter="ashtami">অষ্টমী</button>
+                        <button class="filter-tab" data-filter="nabami">নবমী</button>
+                        <button class="filter-tab" data-filter="dashami">দশমী</button>
                     </div>
                 </div>
             </section>
 
-            <!-- Countdown for Durga Puja -->
-            <section class="countdown-section" aria-labelledby="countdownTitle">
-                <div class="container countdown-inner">
-                    <div class="countdown-kicker">শারদীয় উৎসব ২০২৬</div>
-                    <h2 class="countdown-title" id="countdownTitle">মায়ের আগমনী</h2>
-                    <div class="countdown-divider"></div>
-                    <p class="countdown-subtitle">
-                        অপেক্ষার অবসান প্রায় আসন্ন। মহাষষ্ঠীর পুণ্যতিথি এবং এই মহোৎসবের মহাসূচনার প্রতিটি মুহূর্ত গণনা
-                        করুন।
-                    </p>
-                    <div class="countdown-grid" role="timer" aria-live="polite">
-                        <div class="countdown-card">
-                            <span class="countdown-number" id="countdownDays">০০</span>
-                            <span class="countdown-label">দিন</span>
+            <!-- Gallery Grid -->
+            <section class="gallery-section">
+                <div class="container">
+                    <div class="gallery-grid" id="galleryGrid">
+                        <div class="gallery-item wide" data-filter="mahalaya" data-title="মহালয়া — দেবীপক্ষের সূচনা"
+                            data-tag="মহালয়া">
+                            <img src="./assets/images/backgrounds/bg-1.avif" alt="মহালয়া">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">মহালয়া</span>
+                                <h3>দেবীপক্ষের সূচনা</h3>
+                            </div>
                         </div>
-                        <div class="countdown-card">
-                            <span class="countdown-number" id="countdownHours">০০</span>
-                            <span class="countdown-label">ঘণ্টা</span>
+
+                        <div class="gallery-item" data-filter="sasthi" data-title="ষষ্ঠী — বোধন ও কল্পারম্ভ"
+                            data-tag="ষষ্ঠী">
+                            <img src="./assets/images/backgrounds/bg-2.avif" alt="ষষ্ঠী">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">ষষ্ঠী</span>
+                                <h3>বোধন ও কল্পারম্ভ</h3>
+                            </div>
                         </div>
-                        <div class="countdown-card">
-                            <span class="countdown-number" id="countdownMinutes">০০</span>
-                            <span class="countdown-label">মিনিট</span>
+
+                        <div class="gallery-item tall" data-filter="saptami"
+                            data-title="সপ্তমী — কলাবউ স্নান ও নবপত্রিকা" data-tag="সপ্তমী">
+                            <img src="./assets/images/backgrounds/bg-3.avif" alt="সপ্তমী">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">সপ্তমী</span>
+                                <h3>কলাবউ স্নান ও নবপত্রিকা</h3>
+                            </div>
                         </div>
-                        <div class="countdown-card">
-                            <span class="countdown-number" id="countdownSeconds">০০</span>
-                            <span class="countdown-label">সেকেন্ড</span>
+
+                        <div class="gallery-item" data-filter="ashtami" data-title="অষ্টমী — সন্ধিপূজা ও অঞ্জলি"
+                            data-tag="অষ্টমী">
+                            <img src="./assets/images/backgrounds/bg-4.avif" alt="অষ্টমী">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">অষ্টমী</span>
+                                <h3>সন্ধিপূজা ও অঞ্জলি</h3>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-filter="nabami" data-title="নবমী — মহানবমী ও ধুনুচি নাচ"
+                            data-tag="নবমী">
+                            <img src="./assets/images/backgrounds/bg-5.avif" alt="নবমী">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">নবমী</span>
+                                <h3>মহানবমী ও ধুনুচি নাচ</h3>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item wide" data-filter="dashami"
+                            data-title="দশমী — বিজয়া ও প্রতিমা বিসর্জন" data-tag="দশমী">
+                            <img src="./assets/images/backgrounds/bg-6.avif" alt="দশমী">
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                            <div class="gallery-overlay">
+                                <span class="gallery-tag">দশমী</span>
+                                <h3>বিজয়া ও প্রতিমা বিসর্জন</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="countdown-note">মহাষষ্ঠীর অবরোহণ গণনা · ১৭ অক্টোবর ২০২৬</div>
                 </div>
             </section>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <div class="lightbox-inner">
+                    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <img src="" alt="" id="lightboxImg">
+                    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="lightbox-caption">
+                        <span class="gallery-tag" id="lightboxTag"></span>
+                        <h3 id="lightboxTitle"></h3>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Scroll to Top Button -->
@@ -201,7 +253,7 @@
     </div>
 
     <!-- To link external JS file -->
-    <script type="module" src="./js/pradhan-pata.js"></script>
+    <script type="module" src="./js/chitrashala.js"></script>
     <script type="module" src="./js/main.js"></script>
 </body>
 
