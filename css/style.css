@@ -967,6 +967,7 @@ footer {
 }
 
 .footer-inner a {
+    position: relative;
     text-decoration: none;
     font-weight: bold;
     background: linear-gradient(to right, #ffffff 20%, #ffaa44 50%, #ff5500 80%);
@@ -976,6 +977,66 @@ footer {
     -webkit-text-fill-color: transparent;
     color: #fff;
     animation: internalGlow 4s linear infinite;
+    transition:
+        color 0.35s ease,
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        text-shadow 0.35s ease;
+}
+
+.footer-inner a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            #ffd27a,
+            #ff9d3d,
+            #ffd27a,
+            transparent);
+    transition: left 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow:
+        0 0 6px rgba(255, 177, 73, 0.8),
+        0 0 14px rgba(255, 145, 45, 0.45);
+}
+
+.footer-inner a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffd27a;
+    transform: translateX(-50%) scale(0);
+    box-shadow:
+        0 0 6px #ffd27a,
+        0 0 12px rgba(255, 166, 70, 0.8);
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.35s ease;
+    opacity: 0;
+}
+
+.footer-inner a:hover {
+    color: #ffd27a;
+    transform: translateY(-2px);
+    text-shadow:
+        0 0 8px rgba(255, 190, 100, 0.35),
+        0 0 18px rgba(255, 140, 40, 0.18);
+}
+
+.footer-inner a:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.footer-inner a:hover::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
 }
 
 @keyframes internalGlow {
@@ -990,10 +1051,6 @@ footer {
     100% {
         background-position: 0% center;
     }
-}
-
-.footer-inner a:hover {
-    text-decoration: underline;
 }
 
 
