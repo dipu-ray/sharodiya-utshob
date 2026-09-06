@@ -24,6 +24,18 @@
     animation: heroFadeUp 1s cubic-bezier(.2, .8, .25, 1) both;
 }
 
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .page-kicker {
     display: inline-flex;
     align-items: center;
@@ -145,6 +157,7 @@
     grid-template-columns: 1.15fr .85fr;
     gap: clamp(30px, 5vw, 64px);
     align-items: center;
+    animation: heroFadeUp 1s cubic-bezier(.2, .8, .25, 1) both;
 }
 
 .story-copy p {
