@@ -405,6 +405,15 @@ nav.main-nav a:hover::after {
     }
 }
 
+body.menu-open main {
+    filter: blur(12px);
+    transition: filter 0.35s ease;
+}
+
+body.menu-open .mobile-menu {
+    z-index: 9999;
+}
+
 /* Main */
 main {
     display: block;
