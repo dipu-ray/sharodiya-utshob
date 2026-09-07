@@ -53,7 +53,7 @@
     font-family: 'Playfair Display', 'Poppins', serif;
     font-weight: 900;
     font-size: clamp(46px, 7vw, 80px);
-    line-height: 1.15;
+    line-height: 1.25;
     background: linear-gradient(100deg, #fff 0%, #ffe6c9 30%, var(--orange-2) 60%, var(--red-1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -132,11 +132,6 @@
     margin-top: 16px;
     border-radius: 3px;
     background: linear-gradient(90deg, var(--orange-2), var(--red-1));
-}
-
-.section-divider.center {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .section-heading.center {
