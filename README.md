@@ -27,6 +27,6 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 
 <div align="center">
 
-<img src="./assets/preview/homepage.png" alt="Homepage Preview" width="90%" />
+<img src="./assets/preview/homepage.webp" alt="Homepage Preview" width="90%" />
 
 <br><br>
