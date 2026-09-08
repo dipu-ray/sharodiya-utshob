@@ -27,14 +27,14 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 
 <div align="center">
 
-<img src="./assets/preview/homepage.webp" alt="Homepage Preview" width="90%" />
+<img src="./assets/preview/pradhan-pata-page.webp" alt="Pradhan Pata Page Preview" width="90%" />
 
 <br><br>
 
 <table>
   <tr>
     <td align="center" width="33.33%">
-      <img src="./assets/preview/homepage.webp" alt="Pradhan Pata Page" width="100%" />
+      <img src="./assets/preview/pradhan-pata-page.webp" alt="Pradhan Pata Page" width="100%" />
       <br>
       <sub><b>🏠 প্রধান পাতা</b></sub>
     </td>
