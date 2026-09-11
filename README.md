@@ -71,3 +71,10 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 </div>
 
 ---
+
+## ✨ Features
+
+- 🏠 **Multi-page Navigation** — প্রধান পাতা, পরিচিতি, পটভূমি, চিত্রশালা, সংগীত ও যোগাযোগ পাতা সহ ৬টি সম্পূর্ণ সেকশন
+- 📱 **Fully Responsive** — মোবাইল, ট্যাবলেট ও ডেস্কটপ সব ডিভাইসে সুন্দরভাবে কাজ করে
+
+---
