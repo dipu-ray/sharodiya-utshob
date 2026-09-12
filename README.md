@@ -37,34 +37,28 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
   <tr>
     <td align="center" width="33.33%">
       <img src="./assets/preview/pradhan-pata-page.webp" alt="Pradhan Pata Page" width="100%" />
-      <br>
       <sub><b>🏠 প্রধান পাতা</b></sub>
     </td>
     <td align="center" width="33.33%">
       <img src="./assets/preview/parichiti-page.webp" alt="Parichiti Page" width="100%" />
-      <br>
       <sub><b>👤 পরিচিতি</b></sub>
     </td>
     <td align="center" width="33.33%">
       <img src="./assets/preview/potbhumi-page.webp" alt="Potbhumi Page" width="100%" />
-      <br>
       <sub><b>📜 পটভূমি</b></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33.33%">
       <img src="./assets/preview/chitrashala-page.webp" alt="Chitrashala Page" width="100%" />
-      <br>
       <sub><b>🖼️ চিত্রশালা</b></sub>
     </td>
     <td align="center" width="33.33%">
       <img src="./assets/preview/sangeet-page.webp" alt="Sangeet Page" width="100%" />
-      <br>
       <sub><b>🎵 সংগীত</b></sub>
     </td>
     <td align="center" width="33.33%">
       <img src="./assets/preview/jogajog-page.webp" alt="Jogajog Page" width="100%" />
-      <br>
       <sub><b>📞 যোগাযোগ</b></sub>
     </td>
   </tr>
