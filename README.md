@@ -7,7 +7,7 @@
 <p>
   <img src="https://img.shields.io/static/v1?label=Made%20with&message=%E2%9D%A4&color=e25555&style=for-the-badge" />
   <img src="https://img.shields.io/badge/Created-Aug%2030%2C%202026-4c6ef5?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Last%20Updated-Sept%2011%2C%202026-fd7e14?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Last%20Updated-Sept%2012%2C%202026-fd7e14?style=for-the-badge" />
   <a href="https://dipu-ray.github.io/sharodiya-utshob/pradhan-pata.html">
     <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Site-success?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
@@ -31,7 +31,7 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 
 <img src="./assets/preview/pradhan-pata-page.webp" alt="Pradhan Pata Page Preview" width="100%" />
 
-<br><br>
+<br>
 
 <table>
   <tr>
