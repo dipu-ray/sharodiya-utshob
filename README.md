@@ -85,3 +85,19 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 - 📞 **Contact Page** — যোগাযোগের জন্য সহজ ও ব্যবহারবান্ধব ফর্ম/তথ্য
 
 ---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
+
+| Technology     | Purpose                               |
+| -------------- | ------------------------------------- |
+| **HTML5**      | Website structure ও markup            |
+| **CSS3**       | Styling, layout ও animation           |
+| **JavaScript** | Interactivity ও dynamic functionality |
+
+---
