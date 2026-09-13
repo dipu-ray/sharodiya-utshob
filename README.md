@@ -101,3 +101,38 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 | **JavaScript** | Interactivity ও dynamic functionality |
 
 ---
+
+## 📂 Folder Structure
+
+```text
+sharodiya-utshob/
+├── assets/
+│   ├── audio/            # প্রজেক্টের অডিও ফাইল ও আবহ সংগীত রাখার ফোল্ডার
+│   ├── images/           # সকল ছবি এবং লোগো রাখার ফোল্ডার
+│   └── preview/          # প্রজেক্টের প্রিভিউ স্ক্রিনশট বা ডেমো মিডিয়া ফোল্ডার
+│
+├── css/
+│   ├── pradhan-pata.css  # প্রধান (হোম) পাতার মূল স্টাইলশিট
+│   ├── parichiti.css     # পরিচিতি (অ্যাবাউট) পাতার স্টাইলশিট
+│   ├── potbhumi.css      # পটভূমি (ব্যাকগ্রাউন্ড/ইতিহাস) পাতার স্টাইলশিট
+│   ├── chitrashala.css   # চিত্রশালা (গ্যালারি) পাতার স্টাইলশিট
+│   ├── sangeet.css       # সংগীত (মিউজিক প্লেয়ার) পাতার স্টাইলশিট
+│   ├── jogajog.css       # যোগাযোগ (কন্ট্যাক্ট) পাতার স্টাইলশিট
+│   └── style.css         # প্রজেক্টের বৈশ্বিক বা কমন স্টাইলশিট
+│
+├── js/
+│   ├── pradhan-pata.js   # প্রধান পাতার স্লাইডার বা ডাইনামিক কনটেন্ট স্ক্রিপ্ট
+│   ├── parichiti.js      # পরিচিতি পাতার অ্যানিমেশন বা ইন্টারঅ্যাক্টিভিটি স্ক্রিপ্ট
+│   ├── chitrashala.js    # চিত্রশালার ইমেজ স্লাইডার ও ইন্টারঅ্যাক্টিভিটি স্ক্রিপ্ট
+│   ├── sangeet.js        # অডিও প্লেয়ার কন্ট্রোল ও মিউজিক প্লেব্যাকের স্ক্রিপ্ট
+│   ├── jogajog.js        # কন্ট্যাক্ট ফর্ম ভ্যালিডেশন ও যোগাযোগ পাতার স্ক্রিপ্ট
+│   └── main.js           # প্রজেক্টের মূল কমন ফাংশনালিটি ও গ্লোবাল স্ক্রিপ্ট
+│
+├── pradhan-pata.html     # প্রধান পাতা (Home Page)
+├── parichiti.html        # পরিচিতি পাতা (About Page)
+├── potbhumi.html         # পটভূমি পাতা (Background/History Page)
+├── chitrashala.html      # চিত্রশালা পাতা (Gallery Page)
+├── sangeet.html          # সংগীত পাতা (Music Page)
+├── jogajog.html          # যোগাযোগ পাতা (Contact Page)
+└── README.md             # প্রজেক্টের পরিচিতি ও বিবরণী ডকুমেন্টেশন
+```
