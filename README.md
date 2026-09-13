@@ -31,8 +31,6 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 
 <img src="./assets/preview/pradhan-pata-page.webp" alt="Pradhan Pata Page Preview" width="100%" />
 
-<br><br>
-
 <table>
   <tr>
     <td align="center" width="33.33%">
@@ -88,11 +86,9 @@ _"Wishing everyone a joyous and blessed Durga Puja"_
 
 ## 🛠️ Tech Stack
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-</p>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
 
 | Technology     | Purpose                               |
 | -------------- | ------------------------------------- |
