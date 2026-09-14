@@ -189,4 +189,14 @@ _CSE Student | Aspiring SWE_
   <img src="https://img.shields.io/github/issues/dipu-ray/sharodiya-utshob?style=social" />
 </a>
 
+<br><br>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### 🙏 _"শুভ শারদীয়া দুর্গা পূজার শুভেচ্ছা"_ 🙏
+
+**Made with ❤️ in Bangladesh**
+
+<sub>© 2026 Sharodiya Utshob. All Rights Reserved.</sub>
+
 </div>
