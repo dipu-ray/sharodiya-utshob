@@ -144,3 +144,19 @@ sharodiya-utshob/
 </p>
 
 এই প্রজেক্টের ডেভেলপমেন্ট প্রক্রিয়ায় **[Claude AI](https://claude.ai)** (by Anthropic) থেকে coding সহায়তা নেওয়া হয়েছে — যা code writing, debugging এবং documentation তৈরিতে সহায়ক ছিল।
+
+---
+
+## 👨‍💻 Author & Maintainer
+
+<div align="center">
+
+<img src="https://github.com/dipu-ray.png" width="120" style="border-radius: 50%;" alt="Author Avatar" />
+
+### **দিপু রায়**
+
+_CSE Student | Aspiring SWE_
+
+এই প্রজেক্টটি ভালোবাসা ও নিষ্ঠার সাথে তৈরি করা হয়েছে — শারদীয় উৎসবের আনন্দ সবার কাছে ডিজিটালভাবে পৌঁছে দেওয়ার লক্ষ্যে।
+
+</div>
