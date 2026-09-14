@@ -134,3 +134,13 @@ sharodiya-utshob/
 ├── jogajog.html          # যোগাযোগ পাতা (Contact Page)
 └── README.md             # প্রজেক্টের পরিচিতি ও বিবরণী ডকুমেন্টেশন
 ```
+
+---
+
+## 🙏 Acknowledgments
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-Claude%20AI-D97757?style=for-the-badge&logo=anthropic&logoColor=white" />
+</p>
+
+এই প্রজেক্টের ডেভেলপমেন্ট প্রক্রিয়ায় **[Claude AI](https://claude.ai)** (by Anthropic) থেকে coding সহায়তা নেওয়া হয়েছে — যা code writing, debugging এবং documentation তৈরিতে সহায়ক ছিল।
