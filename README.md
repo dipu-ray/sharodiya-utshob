@@ -159,4 +159,34 @@ _CSE Student | Aspiring SWE_
 
 এই প্রজেক্টটি ভালোবাসা ও নিষ্ঠার সাথে তৈরি করা হয়েছে — শারদীয় উৎসবের আনন্দ সবার কাছে ডিজিটালভাবে পৌঁছে দেওয়ার লক্ষ্যে।
 
+<p>
+  <a href="https://github.com/dipu-ray">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/dipu-ray">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:dipu34786@example.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.facebook.com/dipu.591">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+  </a>
+  <a href="https://dipu-ray.github.io">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+</p>
+
+<br>
+
+<a href="https://github.com/dipu-ray/sharodiya-utshob/stargazers">
+  <img src="https://img.shields.io/github/stars/dipu-ray/sharodiya-utshob?style=social" />
+</a>
+<a href="https://github.com/dipu-ray/sharodiya-utshob/network/members">
+  <img src="https://img.shields.io/github/forks/dipu-ray/sharodiya-utshob?style=social" />
+</a>
+<a href="https://github.com/dipu-ray/sharodiya-utshob/issues">
+  <img src="https://img.shields.io/github/issues/dipu-ray/sharodiya-utshob?style=social" />
+</a>
+
 </div>
