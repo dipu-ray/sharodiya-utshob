@@ -177,7 +177,7 @@ _CSE Student | Aspiring SWE_
   </a>
 </p>
 
-<br><br>
+<br>
 
 <a href="https://github.com/dipu-ray/sharodiya-utshob/stargazers">
   <img src="https://img.shields.io/github/stars/dipu-ray/sharodiya-utshob?style=social" />
@@ -189,7 +189,7 @@ _CSE Student | Aspiring SWE_
   <img src="https://img.shields.io/github/issues/dipu-ray/sharodiya-utshob?style=social" />
 </a>
 
-<br>
+<br><br>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
