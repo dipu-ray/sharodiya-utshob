@@ -186,7 +186,7 @@
     position: absolute;
     inset: 4%;
     border-radius: 50%;
-    border: 1px dashed rgba(247, 166, 58, .45);
+    border: 2px dotted rgba(247, 166, 58, .45);
     animation: ringSpin 40s linear infinite;
 }
 
@@ -208,7 +208,7 @@
     -webkit-text-fill-color: transparent;
     color: #f0553c;
     filter: drop-shadow(0 18px 40px rgba(240, 85, 60, .3));
-    animation: storyFloat 6s ease-in-out infinite;
+    animation: storyFloat 5s ease-in-out infinite;
 }
 
 @keyframes storyFloat {
@@ -219,7 +219,7 @@
     }
 
     50% {
-        transform: translateY(-14px);
+        transform: translateY(-10px);
     }
 }
 

@@ -186,7 +186,7 @@
     position: absolute;
     inset: 6%;
     border-radius: 50%;
-    border: 3px dotted rgba(247, 166, 58, .45);
+    border: 2px dotted rgba(247, 166, 58, .45);
     animation: ringSpin 40s linear infinite;
 }
 
