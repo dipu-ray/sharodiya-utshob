@@ -198,5 +198,8 @@ _CSE Student | Aspiring SWE_
 **Made with ❤️ in Bangladesh**
 
 <sub>© 2026 Sharodiya Utshob. All Rights Reserved.</sub>
+<sub>© 2026 Sharodiya Utshob. All Rights Reserved.</sub>
+<sub>© 2026 Sharodiya Utshob. All Rights Reserved.</sub>
+<sub>© 2026 Sharodiya Utshob. All Rights Reserved.</sub>
 
 </div>
