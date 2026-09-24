@@ -120,23 +120,98 @@
     gap: 22px;
 }
 
+/* ১. অ্যানিমেশনের জন্য কাস্টম প্রোপার্টি রেজিস্টার করা */
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .info-card {
+    position: relative;
+    /* সুডো-এলিমেন্ট পজিশন করার জন্য আবশ্যক */
     padding: 30px 26px;
     text-align: center;
     border-radius: 22px;
+
+    /* মূল বর্ডারটিকে ট্রান্সপারেন্ট করা হলো যেন অ্যানিমেটেড বর্ডারটি নিখুঁতভাবে দেখা যায় */
+    border: 1.5px solid transparent;
+
     background: linear-gradient(145deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .025));
-    border: 1px solid rgba(255, 255, 255, .16);
+    background-clip: padding-box;
+    /* ব্যাকগ্রাউন্ড ও বর্ডারের কনফ্লিক্ট দূর করার জন্য */
+
     backdrop-filter: blur(20px) saturate(1.5);
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 14px 34px rgba(0, 0, 0, .16);
-    transition: transform .4s cubic-bezier(.2, .8, .25, 1), border-color .4s ease, box-shadow .4s ease;
+
+    /* হোভার ট্রানজিশন ঠিক রাখা হলো (border-color ট্রানজিশনটি সুডো-এলিমেন্টে শিফট করা হয়েছে) */
+    transition: transform .4s cubic-bezier(.2, .8, .25, 1), box-shadow .4s ease;
 }
 
+/* --- HOVER EFFECT --- */
 .info-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(247, 166, 58, .55);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 22px 46px rgba(240, 85, 60, .24);
 }
+
+/* ২. বর্ডারের ওপর লাইট অ্যানিমেশন দেওয়ার জন্য ::before ব্যবহার (১০০% ভিজিবল ও স্মুথ স্পিড) */
+.info-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    /* বর্ডারের থিকনেস বা পুরুত্ব */
+
+    /* নরমাল অবস্থার বর্ডার কালার গ্রেডিয়েন্ট */
+    background: conic-gradient(from var(--angle), transparent 70%, #ff007f, #7f00ff, transparent);
+
+    /* গ্লাস ব্যাকগ্রাউন্ড অক্ষুণ্ন রাখার জন্য আধুনিক মাস্কিং */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+
+    /* সমান গতির লющейся অ্যানিমেশন */
+    animation: spin-info 3.5s linear infinite;
+
+    /* হোভার কালার পরিবর্তনের জন্য ট্রানজিশন */
+    transition: background .4s ease;
+}
+
+/* ৩. হোভার করলে বর্ডারের কালার আপনার থিমের সাথে ম্যাচ করে বদলে যাবে */
+.info-card:hover::before {
+    /* হোভার করলে আপনার দেওয়া অরেঞ্জ এবং রেডিশ-অরেঞ্জ কালারের লাইট ঘুরবে */
+    background: conic-gradient(from var(--angle), transparent 60%, rgba(247, 166, 58, 1), rgba(240, 85, 60, 1), transparent);
+}
+
+/* ৪. বর্ডার লাইট ঘোরানোর কি-ফ্রেম (টপ ও বটম সেন্টারের স্লো ভাব দূর করার চূড়ান্ত ফিক্স) */
+@keyframes spin-info {
+    0% {
+        --angle: 0deg;
+    }
+
+    18% {
+        --angle: 90deg;
+    }
+
+    /* টপ সেন্টারে দ্রুত পৌঁছাবে, ফলে গতি একদম সমান লাগবে */
+    50% {
+        --angle: 180deg;
+    }
+
+    68% {
+        --angle: 270deg;
+    }
+
+    /* বটম সেন্টারেও স্পিড বুস্ট পেয়ে মসৃণভাবে চলে যাবে */
+    100% {
+        --angle: 360deg;
+    }
+}
+
 
 .info-icon {
     display: inline-flex;
