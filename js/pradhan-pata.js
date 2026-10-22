@@ -123,7 +123,7 @@ renderSlide();
 
 // Countdown set for Durga Puja Day's
 document.addEventListener('DOMContentLoaded', () => {
-    const countdownTarget = new Date('2026-10-17T00:00:00+06:00').getTime();
+    const countdownTarget = new Date('2027-10-05T00:00:00+06:00').getTime();
     const countdownEls = {
         days: document.getElementById('countdownDays'),
         hours: document.getElementById('countdownHours'),
